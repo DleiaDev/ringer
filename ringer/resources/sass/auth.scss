@@ -1,0 +1,198 @@
+#auth-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+#auth-screen .card {
+  border: none;
+  width: 100%;
+}
+
+// Left
+#auth-screen .card .left {
+  padding: 6vw 0;
+  flex: 2;
+  background-color: #2F3740;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+#auth-screen .card .left .svg {
+  width: 40%;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+#auth-screen .card .left .logo {
+  position: absolute;
+  top: 0.5vw;
+  left: 1vw;
+  font-size: 1.5vw;
+}
+#auth-screen .card .left .logo .icon {
+  margin-right: 0.1vw;
+}
+#auth-screen .card .left .logo span {
+  font-size: 1.5vw;
+  font-family: 'Poiret One', sans-serif;
+}
+#auth-screen .card .left .main {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+#auth-screen .card .left .main p {
+  margin-bottom: 35px;
+}
+
+// Right
+#auth-screen .card .right {
+  flex: 3;
+  padding: 6vw 0;
+  color: grey !important;
+  position: relative;
+  overflow: hidden;
+}
+#auth-screen .card .right form {
+  width: 45%;
+  margin: 0 auto;
+  position: relative;
+}
+#auth-screen .card .right .svg {
+  width: 15vw;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+}
+#auth-screen .card .right h1 {
+  text-align: center;
+  color: #2F3740;
+  font-weight: 900;
+}
+#auth-screen .card .right p {
+  margin-bottom: 30px;
+  text-align: center;
+}
+#auth-screen .card .right p span {
+  color: $primary-dark;
+  font-weight: bold;
+}
+#auth-screen .card .right .submit-group {
+  display: flex;
+  justify-content: center;
+}
+
+// Register
+.register-screen .card .right {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.register-screen .right form > * {
+  margin: 25px 0;
+}
+.register-screen .right input[type=submit] {
+  margin-top: 30px;
+}
+
+// 1024px
+@media screen and (max-width: 1024px) {
+  #auth-screen .card {
+    height: 70vh;
+  }
+  #auth-screen .card .left {
+    padding-top: 100px;
+    flex: 1;
+  }
+  #auth-screen .card .left .svg {
+    width: 200px;
+  }
+  #auth-screen .card .left .logo {
+    top: 10px;
+    left: 15px;
+    font-size: 30px;
+  }
+  #auth-screen .card .left .logo span {
+    font-size: 22px;
+  }
+
+  #auth-screen .card .right {
+    padding: 100px 0;
+    flex: 1;
+  }
+  #auth-screen .card .right .svg {
+    width: 250px;
+    display: none;
+  }
+  #auth-screen .card .right form {
+    width: 250px;
+  }
+}
+
+// 768px
+@media screen and (max-width: 768px) {
+
+  #auth-screen {
+    align-items: stretch;
+    max-width: 100%;
+    padding: 0;
+  }
+  #auth-screen .container {
+    padding: 0;
+    max-width: 100%;
+    display: flex;
+  }
+  #auth-screen .card {
+    width: 100% !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column !important;
+    box-shadow: none;
+  }
+
+  #auth-screen .card .left {
+    padding-top: 70px;
+    flex: 1;
+  }
+  #auth-screen .card .left .svg {
+    display: none;
+  }
+  #auth-screen .card .left .main h1 {
+    margin-bottom: 20px;
+  }
+  #auth-screen .card .left .main p {
+    display: none;
+  }
+
+  #auth-screen .card .right {
+    flex: 3;
+    padding: 20px 85px;
+  }
+  #auth-screen .card .right .svg {
+    display: none;
+  }
+  #auth-screen .card .right h1 {
+    margin-bottom: 20px;
+  }
+  #auth-screen .card .right p {
+    margin-bottom: 20px;
+  }
+
+}
+
+// 425px
+@media screen and (max-width: 425px) {
+  #auth-screen .card .left {
+    padding-top: 75px;
+  }
+  #auth-screen .card .right {
+    flex: 3;
+    padding: 30px;
+  }
+  #auth-screen .card .right p {
+    margin-bottom: 10px;
+  }
+
+}

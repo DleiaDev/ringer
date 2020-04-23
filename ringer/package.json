@@ -1,0 +1,47 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "usage",
+          "corejs": 3,
+          "targets": "> 0.5% in BE, not ie <= 9"
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.4.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "vue-loader": "^15.9.1",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "core-js": "^3.6.4",
+    "jquery": "^3.4.1",
+    "laravel-echo": "^1.6.1",
+    "moment": "^2.24.0",
+    "mprogress": "^0.1.1",
+    "popper.js": "^1.16.1",
+    "pusher-js": "^5.1.1",
+    "sweetalert2": "^9.10.6",
+    "vform": "^1.0.1",
+    "vue": "^2.6.11"
+  }
+}

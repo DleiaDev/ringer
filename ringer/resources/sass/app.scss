@@ -1,0 +1,383 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Quicksand:500');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Mprogress
+@import '~mprogress/mprogress.min';
+
+@import 'contacts-list';
+@import 'conversation';
+@import 'auth';
+@import 'edit-profile';
+@import 'addcontact';
+@import 'welcome';
+
+// Global
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 1vw;
+}
+h4 {
+  font-size: 1.3vw;
+}
+h3 {
+  font-size: 1.5vw;
+}
+h1 {
+  font-size: 2.5vw;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1vw;
+}
+
+// Tooltip
+.tooltip {
+  font-family: 'Quicksand', sans-serif;
+}
+
+// Toast
+.swal-toast-container .swal2-toast {
+  padding: 0.4vw !important;
+}
+.swal-toast-container .swal2-title {
+  font-size: 1.1vw !important;
+}
+.swal-toast-container .swal2-icon {
+  font-size: 1vw;
+}
+
+// Mprogress
+#mprogress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+#mprogress .ui-mprogress {
+  height: 5px;
+}
+#mprogress .ui-mprogress .indeter-bar {
+  height: 5px;
+  background: $green;
+}
+#mprogress .ui-mprogress .bar-bg {
+  background: rgba(0,0,0,0);
+}
+
+// Buttons
+.mybtn1, .mybtn2 {
+  display: inline-block;
+  font-size: 1.2vw;
+  padding: 0.4vw 3vw;
+  border: 0.06vw solid white;
+  border-radius: 3vw;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.mybtn1 {
+  background-color: #2F3740;
+  border-color: #2F3740;
+}
+.mybtn2:hover, .mybtn1:hover {
+  background-color: white;
+  color: #2F3740 !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+.mybtn2:focus, .mybtn1:focus {
+  outline: none;
+}
+
+// Form
+.form-group {
+  margin-bottom: 1vw;
+}
+.input-group {
+  margin-bottom: 2vw;
+  height: 2.5vw;
+}
+.form-control {
+  font-size: 1vw;
+  padding-left: 0.8vw;
+}
+.input-group .input-group-text {
+  padding: 0 0.7vw;
+  font-size: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-group input {
+  height: 100%;
+}
+.form-group.remember-me {
+  display: flex;
+  align-items: center;
+}
+.form-group.remember-me label {
+  margin: 0;
+  cursor: pointer;
+}
+.form-group.remember-me .check-input {
+  width: 1vw;
+  height: 1vw;
+  margin-right: 0.4vw;
+  cursor: pointer;
+}
+
+// Classes
+.image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// Containers
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 80%;
+}
+.card {
+  flex-direction: row;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 0;
+  height: 70vh;
+}
+
+// Main screen
+#main-screen {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+#main-screen .header {
+  background-color: $primary-light;
+  color: $text-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 2vw;
+}
+#main-screen .header .image {
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#main-screen .header .image:hover {
+  transform: scale(1.2);
+}
+#main-screen .header #add-contact-icon {
+  font-size: 1.5vw;
+  transition: 0.15s;
+  cursor: pointer;
+}
+#main-screen .header #add-contact-icon:hover {
+  transform: scale(1.2);
+}
+#main-screen .nav-tabs {
+  background-color: $primary-light;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1vw;
+  padding-bottom: 1vw;
+  font-size: 1.4vw;
+  margin: -2px 0;
+}
+#main-screen .nav-tabs li {
+  flex: 1;
+}
+#main-screen .nav-tabs a {
+  color: $inactive;
+  padding: 0;
+  text-align: center;
+  transition: 0.2s;
+  border: none;
+}
+#main-screen .nav-tabs a:hover {
+  color: #F8F8F9;
+}
+#main-screen .nav-tabs a.active {
+  color: $text-color;
+  background-color: inherit;
+}
+#main-screen .tab-content {
+  flex: 1;
+  overflow: hidden;
+}
+#main-screen .tab-content .tab-pane {
+  height: 100%;
+  background-color: #2F3740;
+  color: #F8F8F9;
+}
+#main-screen #calls, #main-screen #chatroom {
+  padding-top: 30px;
+  text-align: center;
+}
+
+// Second screen
+.second-screen {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  flex: 2;
+}
+.second-screen .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw 1.5vw;
+  color: $inactive;
+}
+.second-screen .back {
+  font-size: 2vw;
+  cursor: pointer;
+}
+
+// 1440px
+@media screen and (max-width: 1440px) {
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  .swal-toast-container .swal2-toast {
+    padding: 5px !important;
+  }
+  .swal-toast-container .swal2-title {
+    font-size: 11px !important;
+  }
+  .swal-toast-container .swal2-icon {
+    font-size: 11px;
+  }
+
+  .mybtn1, .mybtn2 {
+    font-size: 14px;
+    padding: 8px 45px;
+    border-radius: 20px;
+    border-width: 1.5px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+  .form-control {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+  .input-group {
+    height: 40px;
+    margin-bottom: 25px;
+  }
+  .input-group .input-group-text {
+    width: 40px;
+  }
+  .input-group .input-group-text .icon {
+    font-size: 14px;
+  }
+  .form-group.remember-me .check-input {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+
+  #main-screen .header {
+    padding: 20px 30px;
+  }
+  #main-screen .header .image {
+    width: 35px;
+    height: 35px;
+  }
+  #main-screen .nav-tabs {
+    padding: 0 30px;
+    font-size: 20px;
+  }
+  #main-screen .nav-tabs a {
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .second-screen .header {
+    padding: 20px 30px;
+  }
+  .second-screen .back {
+    font-size: 25px;
+  }
+}
+
+// 1024px
+@media screen and (max-width: 1024px) {
+
+  #app {
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .card {
+    height: 100%;
+  }
+
+  #main-screen {
+    height: 100vh;
+  }
+  #main-screen .header #add-contact-icon {
+    font-size: 22px;
+  }
+  #main-screen .nav-tabs a {
+    font-size: 25px;
+  }
+
+  .second-screen {
+    flex: 1;
+    height: 100vh;
+  }
+
+}
+
+// 768px
+@media screen and (max-width: 768px) {
+  .card {
+    display: block;
+  }
+  .second-screen {
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    background-color: $primary-dark;
+  }
+  .second-screen .header {
+    color: white;
+    padding: 5px 15px;
+  }
+}
+
+// 425px
+@media screen and (max-width: 425px) {
+  #main-screen .nav-tabs a {
+    font-size: 22px;
+  }
+}

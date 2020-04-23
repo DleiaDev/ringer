@@ -1,0 +1,136 @@
+#main-screen #contacts {
+  flex: 1;
+  overflow: hidden;
+  color: white;
+}
+#main-screen #contacts-list {
+  max-height: 100%;
+  overflow: auto;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+#main-screen .contact {
+  display: flex;
+  padding: 1.8vw 0.9vw;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+  align-items: center;
+}
+
+#main-screen .contact.selected {
+  background-color: white;
+}
+#main-screen .contact.selected .middle .name {
+  color: $primary-dark;
+}
+#main-screen .contact.selected .middle .message {
+  color: $primary-dark;
+}
+#main-screen .contact.selected .right {
+  color: $primary-dark;
+}
+
+#main-screen .contact .contact-photo {
+  position: relative;
+  margin-right: 0.9vw;
+}
+#main-screen .contact .contact-photo .image {
+  display: block;
+  width: 2.7vw;
+  height: 2.7vw;
+  border-radius: 50%;
+}
+#main-screen .contact .contact-photo .status {
+  bottom: 0;
+  right: 0;
+  width: 0.8vw;
+  height: 0.8vw;
+  position: absolute;
+  border-radius: 50%;
+}
+#main-screen .contact .right .seen .icon:nth-child(2) {
+  margin-left: -0.6vw;
+}
+#main-screen .contact .contact-photo .status.online {
+  background-color: #38c172;
+}
+#main-screen .contact .contact-photo .status.offline {
+  background-color: #e3342f;
+}
+
+#main-screen .contact .middle {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#main-screen .contact .middle .name {
+  font-weight: bold;
+  font-size: 1vw;
+}
+#main-screen .contact .middle .message {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+#main-screen .contact .right {
+  position: absolute;
+  top: 0.42vw;
+  right: 1.2vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 0.8vw;
+}
+#main-screen .contact .right .unread {
+  flex-basis: 20%;
+  text-align: right;
+  background-color: #38c172;
+  padding: 0.3vw;
+  margin-top: 0.5vw;
+}
+
+// 1440px
+@media screen and (max-width: 1440px) {
+  #main-screen .contact {
+    padding: 25px;
+  }
+  #main-screen .contact .contact-photo {
+    margin-right: 15px;
+  }
+  #main-screen .contact .contact-photo .image {
+    width: 40px;
+    height: 40px;
+  }
+  #main-screen .contact .contact-photo .status {
+    width: 12px;
+    height: 12px;
+  }
+  #main-screen .contact .middle .name {
+    font-size: 14px;
+  }
+  #main-screen .contact .right {
+    top: 5px;
+    right: 20px;
+    font-size: 11px;
+  }
+  #main-screen .contact .right .seen {
+    font-size: 12px;
+  }
+  #main-screen .contact .right .seen .icon:nth-child(2) {
+    margin-left: -10px;
+  }
+}
+
+// 425px
+@media screen and (max-width: 425px) {
+  #main-screen .contact {
+    padding: 20px;
+  }
+}

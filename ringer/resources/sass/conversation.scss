@@ -1,0 +1,195 @@
+#conversation {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  padding-bottom: 4.5vw;
+}
+#conversation .header .right {
+  display: flex;
+  align-items: center;
+}
+#conversation .header .right .image {
+  width: 1.8vw;
+  height: 1.8vw;
+  margin-right: 0.5vw;
+  border-radius: 50%;
+}
+#conversation .header .right .name {
+  cursor: default;
+}
+#conversation ul {
+  background-color: $body-bg;
+  flex: 1;
+  overflow: auto;
+  list-style-type: none;
+  padding: 0 0.6vw;
+  margin: 0;
+  position: relative;
+}
+#conversation button#load-more-btn {
+  font-size: 0.8vw;
+  position: absolute;
+  top: -0.2vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+  z-index: 100;
+}
+#conversation .message {
+  margin: 0.6vw 0;
+  display: flex;
+}
+#conversation .message .text {
+  max-width: 50%;
+  text-align: left;
+  display: inline-block;
+  padding: 0.6vw;
+  padding-right: 2.4vw;
+  position: relative;
+  border-radius: 0.25vw;
+  font-size: 1.1vw;
+  cursor: default;
+}
+#conversation .message.received {
+  justify-content: flex-start;
+}
+#conversation .message.received .text {
+  background-color: #E0DFDF;
+  padding-right: 0.6vw;
+}
+#conversation .message.sent {
+  justify-content: flex-end;
+}
+#conversation .message.sent .text {
+  background-color: $primary-dark;
+  color: white;
+}
+#conversation .message .status {
+  font-size: 0.8vw;
+  position: absolute;
+  bottom: 0.5vw;
+  right: 0.5vw;
+}
+#conversation .message .status .seen .icon:nth-child(2) {
+  margin-left: -0.6vw;
+}
+#conversation .typing {
+  position: absolute;
+  width: 5vw;
+  text-align: center;
+  bottom: 5.5vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 0.9vw;
+  background-color: #080325;
+  color: white;
+  z-index: 4;
+  display: none;
+  border-radius: 0.25vw;
+}
+
+#conversation .message-composer {
+  height: 4vw;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.8vw;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+#conversation .message-composer input {
+  overflow-y: hidden;
+  overflow-x: auto;
+  flex: 1;
+  width: 100%;
+  max-height: 100%;
+  resize: none;
+  border: none;
+  font-size: 1.2vw;
+  padding: 0;
+}
+#conversation .message-composer input:focus {
+  box-shadow: none;
+}
+#conversation .message-composer .icon {
+  font-size: 2vw;
+  color: $inactive;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-right: 1vw;
+}
+#conversation .message-composer .icon :hover {
+  color: $primary-dark;
+}
+
+// 1024px
+@media screen and (max-width: 1024px) {
+  #conversation .header .right .image {
+    width: 26px;
+    height: 26px;
+    margin-right: 7px;
+  }
+  #conversation .header .right .name {
+    font-size: 16px;
+  }
+
+  #conversation ul {
+    padding: 0 10px;
+  }
+  #conversation button#load-more-btn {
+    font-size: 12px;
+  }
+
+  #conversation .message .text {
+    padding: 8px;
+    padding-right: 30px;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  #conversation .message.received .text {
+    padding-right: 8px;
+  }
+  #conversation .message .status {
+    font-size: 11px;
+  }
+  #conversation .message .status .seen .icon:nth-child(2) {
+    margin-left: -9px
+  }
+
+  #conversation .message-composer {
+    height: 50px;
+    padding: 10px;
+  }
+  #conversation .message-composer input {
+    font-size: 16px;
+  }
+  #conversation .message-composer .icon {
+    font-size: 25px;
+    margin-right: 10px;
+  }
+}
+
+// 768px
+@media screen and (max-width: 768px) {
+  #conversation {
+    padding-bottom: 50px;
+  }
+  #conversation .message {
+    margin: 8px 0;
+  }
+  #conversation .message.received .text {
+    background-color: $primary-light;
+    color: white;
+  }
+  #conversation .message.sent .text {
+    background-color: white;
+    color: $primary-dark;
+  }
+}

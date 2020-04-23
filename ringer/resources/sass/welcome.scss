@@ -1,0 +1,22 @@
+#welcome {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#welcome .image {
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 1440px) {
+  #welcome .image {
+    width: 100px;
+    height: 100px;
+  }
+}
